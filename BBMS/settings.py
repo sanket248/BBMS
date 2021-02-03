@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'donorreg.apps.DonorregConfig',
 ]
 
 MIDDLEWARE = [
@@ -74,9 +75,13 @@ WSGI_APPLICATION = 'BBMS.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default' :{
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'ce34' , # Name of the database
+        'USER': 'ce34', #user name for the database
+        'PASSWORD' : 'ce34', # password
+        'HOST' : 'localhost', # IP address of the database
+        'PORT' : '3306', # port number of database server
     }
 }
 
