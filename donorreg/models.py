@@ -9,3 +9,4 @@ class Doner_details(models.Model):
     blood_group = models.CharField(max_length=3)
     address = models.CharField(max_length=30)
     city = models.CharField(max_length=10)
+    gender = models.CharField(max_length=6)
