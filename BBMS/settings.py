@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,9 +82,9 @@ WSGI_APPLICATION = 'BBMS.wsgi.application'
 DATABASES = {
     'default' :{
         'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'ce34' , # Name of the database
-        'USER': 'ce34', #user name for the database
-        'PASSWORD' : 'ce34', # password
+        'NAME' : 'ce28' , # Name of the database
+        'USER': 'root', #user name for the database
+        'PASSWORD' : '1145', # password
         'HOST' : 'localhost', # IP address of the database
         'PORT' : '3306', # port number of database server
     }
