@@ -19,5 +19,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('loginmodule/', include('loginmodule.urls')),
+    path('', include('loginmodule.urls'),name="login"),
+    path('donorreg/', include('donorreg.urls')),
+    path('search/', include('search.urls')),
 ]

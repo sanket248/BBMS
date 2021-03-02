@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
-def dreg(request):
+def srch(request):
     c = {}
     c.update(csrf(request))
-    return render(None, 'dreg.html', c)
+    return render(None, 'search.html', c)
