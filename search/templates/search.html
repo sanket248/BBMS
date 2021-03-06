@@ -1,1 +1,119 @@
-search
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button {
+            background-color: #22d628;
+            width: 95%;
+            color: rgb(19, 13, 3);
+            padding: 15px;
+            margin: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        form {
+            border: 2px solid #110101;
+            width: 30%;
+
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=select],
+        input[type=email] {
+            width: 95%;
+            margin: 8px 10px;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 1px solid rgb(4, 17, 4);
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            margin: 10px 5px;
+        }
+
+
+        .container {
+            padding: 25px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: DarkSalmon;
+            color: white;
+        }
+    </style>
+
+    <title>BBMS</title>
+</head>
+
+<body>
+
+    <h1 align="center" style="color: rgb(255, 255, 255); background-color: rgb(17, 85, 3);">
+        Blood Bank Management System
+    </h1>
+    <div class="topnav">
+        <a href="/loginmodule/loggedin/">Home</a>
+        <a class="active" href="/search/ser/">Search</a>
+        <a href="/donorreg/donor-reg">Be a Donor</a>
+        <a href="#contact">About Us</a>
+        <a href="/loginmodule/logout/">LogOut</a>
+    </div>
+    
+    
+
+    <br />
+    <footer>
+        <p>Blood bank management System
+        <p>Author: <br>
+            <a href="mailto:hege@example.com">xyz@example.com</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
