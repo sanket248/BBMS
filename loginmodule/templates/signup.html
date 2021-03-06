@@ -8,7 +8,6 @@
         Body {
             font-family: Calibri, Helvetica, sans-serif;
             background-color: rgb(255, 255, 255);
-            align-content: center;
         }
 
         .topnav {
@@ -48,6 +47,7 @@
         form {
             border: 2px solid #110101;
             width: 30%;
+            
         }
 
         input[type=text],
@@ -87,28 +87,37 @@
 </head>
 
 <body>
+
     {% if form.errors %}
-    <p class="error"> Invalid Username or Password </p>
+    <p class="error"> Invalid Details </p>
     {% endif %}
     <h1 align="center" style="color: rgb(255, 255, 255); background-color: rgb(17, 85, 3);">Blood Bank Management System
     </h1>
     <div class="topnav">
         <a href="/home/">Home</a>
         <a href="/admin/">Admin</a>
-        <a href="/signup/">SignUp</a>
-        <a class="active" href="">Login</a>
+        <a class="active" href="">SignUp</a>
+        <a href="/login/">Login</a>
     </div>
-    
-    <h1>Login Here!</h1>
-    {{msg}}
-    <form action="/auth/" method="post">{% csrf_token %}
-        <label for="username"><b> username :</b> </label>
-        <input type="text" name="username" value="" id="username" required><br />
-        <label for="password"><b> Password:</b></label>
-        <input type="password" name="password" value="" id="password" required><br />
-        <button type="submit" class="btn">Login</button>
+    <h2>SignUp Here!</h2>
+
+    <form action="/signup_add/" method="post">{% csrf_token %}
+        <div class="container">
+            <label for="username"><b> username :</b></label><br />
+            <input type="text" name="username" value="" id="username" required><br />
+            <label for="password"><b> Password:</b></label><br />
+            <input type="password" name="password" value="" id="password" required><br />
+            <label for="password"><b> Email:</b></label><br />
+            <input type="email" name="email" value="" id="email" required><br />
+            <label for="password"><b> First Name:</b></label><br />
+            <input type="text" name="fname" value="" id="fname" required><br />
+            <label for="password"><b> Last Name:</b></label><br />
+            <input type="text" name="lname" value="" id="lname" required><br />
+            <button type="submit" class="btn">SignUp</button>
+            <button type="reset" class="btn" )">Reset</button>
+        </div>
     </form>
-    <br />
+    <br/>
     <footer>
         <p>Blood bank management System
         <p>Author: <br>
