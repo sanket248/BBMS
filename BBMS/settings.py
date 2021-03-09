@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'donorreg.apps.DonorregConfig',
     'loginmodule',
     'search',
+    'AboutUs',
 ]
 
 MIDDLEWARE = [
