@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('loginmodule.urls'),name="login"),
     path('donorreg/', include('donorreg.urls')),
     path('search/', include('search.urls')),
+    path('AboutUs/',include('AboutUs.urls')),
 ]
