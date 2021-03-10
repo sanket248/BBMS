@@ -44,12 +44,12 @@
             margin: 10px 10px;
             border: none;
             cursor: pointer;
+            border: 1px solid rgb(4, 17, 4);
         }
 
         form {
             border: 2px solid #110101;
             width: 30%;
-
         }
 
         input[type=text],
@@ -74,17 +74,16 @@
             margin: 10px 5px;
         }
 
-
         .container {
             padding: 25px;
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(235, 141, 125);
         }
 
         footer {
             text-align: center;
             padding: 3px;
-            background-color: DarkSalmon;
-            color: white;
+            background-color: rgb(148, 147, 147);
+            color: rgb(0, 0, 0);
         }
     </style>
 
@@ -92,6 +91,17 @@
 </head>
 
 <body>
+
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVmAbXTwe7dCvUm7LyTCpXsYDT4bdJzOZoZA&usqp=CAU');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1550px;
+            background-position: center;
+            height: 500px;
+        }
+    </style>
 
     <h1 align="center" style="color: rgb(255, 255, 255); background-color: rgb(17, 85, 3);">
         Blood Bank Management System
@@ -103,39 +113,43 @@
         <a href="/AboutUs/about/">About Us</a>
         <a href="/loginmodule/logout/">LogOut</a>
     </div>
-    <h2>{{msg}}</h2>
-    <h2>Register yourself to be a donor...</h2>
+    <center>
+        <h2>{{msg}}</h2>
+        <h2 style="border:2px solid Tomato;font-family:jokerman;color:red;">REGISTER YOURSELF TO BE A DONOR...</h2>
 
-    <form action="/donorreg/add-donor/" method="post">{% csrf_token %}
-        <div class="container">
-            <label for="dname"><b> your name :</b></label><br />
-            <input type="text" name="dname" value="" id="dname" required><br />
-            <label for="cnum"><b> contect number :</b></label><br />
-            <input type="text" name="cnum" value="" id="cnum" required><br />
-            <label for="bgroup"><b> blood group : </b></label>
-            <select name="bgroup" id="bgroup" style="width: 95%; margin: 8px 10px; padding: 12px 20px; display: inline-block; border: 1px solid rgb(4, 17, 4); box-sizing: border-box;">
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-            </select><br />
-            <label for="address"><b> Address :</b></label><br />
-            <input type="text" name="address" value="" id="address" required><br />
-            <label for="city"><b> City :</b></label><br />
-            <input type="text" name="city" value="" id="city" required><br />
-            <label for="gender"><b> Gender :</b></label><br />
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br><br>
-            <button type="submit" class="btn">Register</button>
-            <button type="reset" class="btn">Reset</button>
-        </div>
-    </form>
+        <form action="/donorreg/add-donor/" method="post">{% csrf_token %}
+            <div class="container">
+                <label for="dname"><b> your name :</b></label><br />
+                <input type="text" name="dname" value="" id="dname" placeholder="your name" required><br />
+                <label for="cnum"><b> contect number :</b></label><br />
+                <input type="text" name="cnum" value="" id="cnum" placeholder="conect number" required><br />
+                <label for="bgroup"><b> blood group : </b></label>
+                <select name="bgroup" id="bgroup"
+                    style="width: 95%; margin: 8px 10px; padding: 12px 20px; display: inline-block; border: 1px solid rgb(4, 17, 4); box-sizing: border-box;">
+                    <option value="">--select your blood group--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select><br />
+                <label for="address"><b> Address :</b></label><br />
+                <input type="text" name="address" value="" id="address" placeholder="address" required><br />
+                <label for="city"><b> City :</b></label><br />
+                <input type="text" name="city" value="" id="city" placeholder="city" required><br />
+                <label for="gender"><b> Gender :</b></label><br />
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+                <button type="submit" class="btn">Register</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+        </form>
+    </center>
     <br />
     <footer>
         <p>Blood bank management System

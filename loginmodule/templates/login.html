@@ -43,6 +43,7 @@
             margin: 10px 10px;
             border: none;
             cursor: pointer;
+            border: 1px solid rgb(4, 17, 4);
         }
 
         form {
@@ -74,19 +75,30 @@
 
         .container {
             padding: 25px;
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(235, 141, 125);
         }
 
         footer {
             text-align: center;
             padding: 3px;
-            background-color: DarkSalmon;
-            color: white;
+            background-color: rgb(148, 147, 147);
+            color: rgb(0, 0, 0);
         }
     </style>
 </head>
 
 <body>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVmAbXTwe7dCvUm7LyTCpXsYDT4bdJzOZoZA&usqp=CAU');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1550px;
+            background-position: center;
+            height: 500px;
+        }
+    </style>
+
     {% if form.errors %}
     <p class="error"> Invalid Username or Password </p>
     {% endif %}
@@ -98,17 +110,22 @@
         <a href="/signup/">SignUp</a>
         <a class="active" href="">Login</a>
     </div>
-    
-    <h1>Login Here!</h1>
-    {{msg}}
-    <form action="/auth/" method="post">{% csrf_token %}
-        <label for="username"><b> username :</b> </label>
-        <input type="text" name="username" value="" id="username" required><br />
-        <label for="password"><b> Password:</b></label>
-        <input type="password" name="password" value="" id="password" required><br />
-        <button type="submit" class="btn">Login</button>
-    </form>
-    <br />
+
+    <center>
+        <h1 style="border:2px solid Tomato;font-family:jokerman;color:red;">LOGIN HERE</h1>
+        {{msg}}
+
+        <form action="/auth/" method="post">{% csrf_token %}
+            <div class="container">
+                <label for="username"><b> username :</b> </label>
+                <input type="text" name="username" value="" id="username" placeholder="username" required><br />
+                <label for="password"><b> Password:</b></label>
+                <input type="password" name="password" value="" id="password" placeholder="password" required><br />
+                <button type="submit" class="btn">Login</button>
+            </div>
+        </form>
+    </center>
+    <br /><br><br>
     <footer>
         <p>Blood bank management System
         <p>Author: <br>

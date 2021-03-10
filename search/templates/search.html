@@ -51,16 +51,17 @@
             width: 30%;
 
         }
-		
-		input[type=button]{
-			background-color: #22d628;
+
+        input[type=button] {
+            background-color: #22d628;
             width: 95%;
             color: rgb(19, 13, 3);
             padding: 15px;
             margin: 10px 10px;
             border: none;
             cursor: pointer;
-		}
+            border: 1px solid rgb(4, 17, 4);
+        }
 
         input[type=text],
         input[type=password],
@@ -84,17 +85,16 @@
             margin: 10px 5px;
         }
 
-
         .container {
             padding: 25px;
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(235, 141, 125);
         }
 
         footer {
             text-align: center;
             padding: 3px;
-            background-color: DarkSalmon;
-            color: white;
+            background-color: rgb(148, 147, 147);
+            color: rgb(0, 0, 0);
         }
     </style>
 
@@ -103,16 +103,16 @@
 
 <body>
 
-<style>
-body {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVmAbXTwe7dCvUm7LyTCpXsYDT4bdJzOZoZA&usqp=CAU');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: 1550px;
-  background-position: center; 
-  height: 500px;
-}
-</style>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVmAbXTwe7dCvUm7LyTCpXsYDT4bdJzOZoZA&usqp=CAU');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1550px;
+            background-position: center;
+            height: 500px;
+        }
+    </style>
 
     <h1 align="center" style="color: rgb(255, 255, 255); background-color: rgb(17, 85, 3);">
         Blood Bank Management System
@@ -124,6 +124,7 @@ body {
         <a href="/AboutUs/about/">About Us</a>
         <a href="/loginmodule/logout/">LogOut</a>
     </div><br><br>
+<<<<<<< HEAD
     
 	<center><h1 style="border:2px solid Tomato;font-family:jokerman;color:red;">SEARCH DONOR</center>
 	<br><br>
@@ -162,6 +163,40 @@ body {
     </form></center><br><br>
 	
 	
+=======
+
+    <center>
+        <h1 style="border:2px solid Tomato;font-family:jokerman;color:red;">SEARCH DONOR
+    </center>
+    <br><br>
+
+    <center>
+        <form action="" method="post">
+            <div class="container">
+
+                <label for="bgroup"><b> blood group : </b></label>
+                <select name="bgroup" id="bgroup"
+                    style="width: 95%; margin: 8px 10px; padding: 12px 20px; display: inline-block; border: 1px solid rgb(4, 17, 4); box-sizing: border-box;">
+                    <option value="">--select a blood group--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select><br />
+
+                <label for="city"><b> City :</b></label><br />
+                <input type="text" name="city" value="" id="city" placeholder="city name eg. surat" required><br />
+
+                <input type="button" value="Search" class="btn" onclick="/search.html">
+
+            </div>
+        </form>
+    </center><br><br>
+>>>>>>> a69dc76e949c26917b24da1ee2d3c86f61741f3e
 
     <br />
     <footer>
