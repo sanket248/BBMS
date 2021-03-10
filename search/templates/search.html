@@ -51,6 +51,16 @@
             width: 30%;
 
         }
+		
+		input[type=button]{
+			background-color: #22d628;
+            width: 95%;
+            color: rgb(19, 13, 3);
+            padding: 15px;
+            margin: 10px 10px;
+            border: none;
+            cursor: pointer;
+		}
 
         input[type=text],
         input[type=password],
@@ -93,6 +103,17 @@
 
 <body>
 
+<style>
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVmAbXTwe7dCvUm7LyTCpXsYDT4bdJzOZoZA&usqp=CAU');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 1550px;
+  background-position: center; 
+  height: 500px;
+}
+</style>
+
     <h1 align="center" style="color: rgb(255, 255, 255); background-color: rgb(17, 85, 3);">
         Blood Bank Management System
     </h1>
@@ -102,9 +123,35 @@
         <a href="/donorreg/donor-reg">Be a Donor</a>
         <a href="/AboutUs/about/">About Us</a>
         <a href="/loginmodule/logout/">LogOut</a>
-    </div>
+    </div><br><br>
     
-    
+	<center><h1 style="border:2px solid Tomato;font-family:jokerman;color:red;">SEARCH DONOR</center>
+	<br><br>
+	
+    <center><form action="/donorreg/add-donor/" method="post">
+        <div class="container">
+            
+            <label for="bgroup"><b> blood group : </b></label>
+            <select name="bgroup" id="bgroup" style="width: 95%; margin: 8px 10px; padding: 12px 20px; display: inline-block; border: 1px solid rgb(4, 17, 4); box-sizing: border-box;">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select><br />
+            
+            <label for="city"><b> City :</b></label><br />
+            <input type="text" name="city" value="" id="city" required><br />
+            
+			<input type="button" value="Search" class="btn" onclick="/search.html">
+            
+        </div>
+    </form></center><br><br>
+	
+	
 
     <br />
     <footer>
