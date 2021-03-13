@@ -4,6 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
     <style>
@@ -47,37 +51,9 @@
             border: 1px solid rgb(4, 17, 4);
         }
 
-        form {
-            border: 2px solid #110101;
-            width: 30%;
-
-        }
-
-        input[type=text],
-        input[type=password],
-        input[type=select],
-        input[type=email] {
-            width: 95%;
-            margin: 8px 10px;
-            padding: 12px 20px;
-            display: inline-block;
-            border: 1px solid rgb(4, 17, 4);
-            box-sizing: border-box;
-        }
-
-        button:hover {
-            opacity: 0.7;
-        }
-
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            margin: 10px 5px;
-        }
-
-        .container {
-            padding: 25px;
-            background-color: rgb(235, 141, 125);
+        .content {
+            text-align: center;
+            height: 100%;
         }
 
         footer {
@@ -85,6 +61,18 @@
             padding: 3px;
             background-color: rgb(148, 147, 147);
             color: rgb(0, 0, 0);
+        }
+
+        table.table-bordered {
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        table.table-bordered>thead>tr>th {
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        table.table-bordered>tbody>tr>td {
+            border: 2px solid rgb(0, 0, 0);
         }
     </style>
 
@@ -113,39 +101,34 @@
         <a href="/donorreg/donor-reg">Be a Donor</a>
         <a href="/AboutUs/about/">About Us</a>
         <a href="/loginmodule/logout/">LogOut</a>
-    </div><br><br>
+    </div><br>
 
     <center>
-        <h1 style="border:2px solid Tomato;font-family:jokerman;color:red;">SEARCH DONOR
+        <h1 style="border:2px solid Tomato;font-family:jokerman;color:red;">DONOR LIST OF {{bgroup}} BLOOD GROUP</h1>
     </center>
     <br><br>
-
-    <center>
-        <form action="/search/d-list/" method="post">{% csrf_token %}
-            <div class="container">
-
-                <label for="bgroup"><b> blood group : </b></label>
-                <select name="bgroup" id="bgroup"
-                    style="width: 95%; margin: 8px 10px; padding: 12px 20px; display: inline-block; border: 1px solid rgb(4, 17, 4); box-sizing: border-box;">
-                    <option value="">--select a blood group--</option>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                </select><br />
-
-                <label for="city"><b> City :</b></label><br />
-                <input type="text" name="city" value="" id="city" placeholder="city name eg. surat" required><br />
-
-                <button type="submit" class="btn">Search</button>
-
-            </div>
-        </form>
-    </center><br><br>
+    <div class="container" style="height: 100%;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contect no.</th>
+                    <th>Address</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for donor in donors %}
+                <tr>
+                    <td>{{ donor.donor_name}}</td>
+                    <td>{{ donor.contect_no }}</td>
+                    <td>{{ donor.address }}</td>
+                    <td>{{ donor.city }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
     <br />
     <footer>

@@ -113,9 +113,9 @@
 
     <center>
         <h1 style="border:2px solid Tomato;font-family:jokerman;color:red;">LOGIN HERE</h1>
-        {{msg}}
+        <h4>{{msg}}</h4>
 
-        <form action="/auth/" method="post">{% csrf_token %}
+        <form action="/auth/" method="POST">{% csrf_token %}
             <div class="container">
                 <label for="username"><b> username :</b> </label>
                 <input type="text" name="username" value="" id="username" placeholder="username" required><br />

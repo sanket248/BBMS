@@ -48,7 +48,7 @@ def auth_view(request):
         return render(request, 'login.html', {"msg": msg})
 
 def loggedin(request):
-    return render(None, 'loggedin.html', {"full_name":request.user.username})
+    return render(request, 'loggedin.html', {"full_name":request.user.username})
 
 def invalidlogin(request):
     msg = "your username/password is incorrect..."
