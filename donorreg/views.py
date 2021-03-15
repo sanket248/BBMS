@@ -28,3 +28,4 @@ def add(request):
 def addsuccess(request):
     msg = "Thank you for donating..."
     return render(request, 'dreg.html', {"msg": msg})
+
