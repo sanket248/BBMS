@@ -1,4 +1,4 @@
 # BBMS
-blood bank management system
+blood bank management system (Django)
 
 This project is developed in Django framework.
